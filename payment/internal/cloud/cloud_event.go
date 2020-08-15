@@ -7,7 +7,6 @@ import (
 
 func NewCloudEventsClient() (cloudevents.Client, error) {
 	client, err := cloudevents.NewDefaultClient()
-
 	if err != nil {
 		Logger.Errorw("Something went wrong creating cloud events client", "error", err.Error())
 		return nil, err
