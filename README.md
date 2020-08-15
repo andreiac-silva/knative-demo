@@ -4,7 +4,7 @@ This repository contains projects used to demonstrate knative in "Knative and Cl
 
 ## Demo flow
 
-We have an online store. To buy something, the following flow is
+We have an online store. To buy something, the applicating pass to the following steps:
 
 1. (sequence) Purchase Service receives the initial payload - user input
 2. (sequence) Payment Service receives the payload from Purchase, load customer information and approves or not payment
