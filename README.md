@@ -12,4 +12,4 @@ We have an online store. To buy something, the applicating pass to the following
 4. (parallel) If payment status is "approved", Invoce Service will be triggered
 
 These are ficticios functionalities. The most important here are how the services are communicating with each other and how we can maintain two or more versions of one service at the same time. 
-To know more about Services individually, see their respective READMEs.
+To know more about Services individually, see their respective READMEs. 
