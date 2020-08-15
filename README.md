@@ -1,3 +1,5 @@
+Demo and presentation By @JhonasMutton and @andreiac-silva
+
 # Knative-demo
 This repository contains projects used to demonstrate knative in "Knative and Cloud Events in Go" talk.
 
