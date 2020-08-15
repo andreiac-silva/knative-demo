@@ -34,13 +34,11 @@ If you are running the application locally, you can simply send a POST request s
 ```
 curl -X POST \
   http://localhost:8080/ \
-  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
   -H 'ce-id: 610b6dd4-c85d-417b-b58f-3771e532' \
   -H 'ce-source: http://store.com/buy' \
   -H 'ce-specversion: 1.0' \
   -H 'ce-type: com.store.buy' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 5124f6a5-1a17-4a7b-14b3-4ec402e9b0e2' \
   -d '{
    "customer":{
       "cpf":"123.222.333-X"
