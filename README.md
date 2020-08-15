@@ -1,4 +1,4 @@
-Demo and presentation By [Jhonas Mutton](https://github.com/JhonasMutton) and [Andreia Silva](https://github.com/andreiac-silva).
+Demo and presentation by [Jhonas Mutton](https://github.com/JhonasMutton) and [Andreia Silva](https://github.com/andreiac-silva).
 
 # Knative-demo
 This repository contains projects used to demonstrate knative in "Knative and Cloud Events in Go" talk.
