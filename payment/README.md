@@ -2,7 +2,7 @@
 Payment Service is a dummy service that receives a cloud event, process and propagate it thought the flow.
 This Service will approve purchase for customers with attribute cpf (see curl) containing "123". Besides that, will load customer's name and e-mail into current event.
 
-# Execution
+## Execution
 
 ### First of all, you must download Wire
 O Wire is responsible for dependency injection. Download it:
@@ -28,7 +28,7 @@ So, you can pull some one of this tags v1, v2 or latest.
 docker pull andreiacsilva/payment:<v1,v2 or latest>
 ```
 
-## How can I directly send a cloud event to Payment Service?
+### How can I directly send a cloud event to Payment Service?
 If you are running the application locally, you can simply send a POST request such as bellow.
 
 ```
