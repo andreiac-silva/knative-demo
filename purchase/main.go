@@ -2,14 +2,14 @@ package main
 
 import (
 	"github.com/joho/godotenv"
-	. "purchase/internal/logger"
 	"net/http"
 	"os"
+	. "purchase/internal/logger"
 	"time"
 )
 
 func init() {
-	err := godotenv.Load("./purchase/.env")
+	err := godotenv.Load()
 	if err != nil {
 		panic("Error to start application: cannot load environment variables: " + err.Error())
 	}

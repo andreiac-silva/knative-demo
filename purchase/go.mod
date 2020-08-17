@@ -1,4 +1,4 @@
-module github.com/andreiac-silva/purchase
+module purchase
 
 go 1.14
 

@@ -2,8 +2,8 @@ package handler
 
 import (
 	"context"
-	. "invoice/internal/logger"
 	cloudevents "github.com/cloudevents/sdk-go/v2"
+	. "invoice/internal/logger"
 )
 
 type CloudEventHandler struct {
