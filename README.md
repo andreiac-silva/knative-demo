@@ -8,7 +8,7 @@ This repository contains projects used to demonstrate knative in "Knative and Cl
 
 We have an online store. To buy something, the applicating pass to the following steps:
 
-1. (sequence) Purchase Service receives the initial payload - user input
+1. (source) Purchase Service receives the initial payload - user input
 2. (sequence) Payment Service receives the payload from Purchase, load customer information and approves or not payment
 3. (parallel) Email Service sends an email with transaction with payment status
 4. (parallel) If payment status is "approved", Invoce Service will be triggered
