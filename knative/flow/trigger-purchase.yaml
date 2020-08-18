@@ -1,0 +1,14 @@
+apiVersion: eventing.knative.dev/v1beta1
+kind: Trigger
+metadata:
+  name: trigger-email-verification
+spec:
+  broker: broker-purchase
+  filter:
+    attributes:
+      type: dev.knative.eventing.demo.purchase
+  subscriber:
+    ref:
+      apiVersion: flows.knative.dev/v1beta1
+      kind: Sequence
+      name: sequence
