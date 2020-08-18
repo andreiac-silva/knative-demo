@@ -1,0 +1,6 @@
+replicaCount: 1
+
+image:
+  repository: andreiacsilva/email
+  tag: latest
+  pullPolicy: Always

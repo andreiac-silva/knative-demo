@@ -1,0 +1,19 @@
+# scale to zero is enabled by default. but, with minScale you can disable this feature.
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: {{ include "invoice.fullname" . }}
+  labels:
+{{ include "invoice.labels" . | indent 4 }}
+    serving.knative.dev/visibility: cluster-local
+spec:
+  template:
+    metadata:
+     annotations:
+      autoscaling.knative.dev/minScale: "1"
+      autoscaling.knative.dev/maxScale: "3"
+    spec:
+      containers:
+        - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          name: {{ .Chart.Name }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}

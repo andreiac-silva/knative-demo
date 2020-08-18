@@ -1,0 +1,6 @@
+replicaCount: 1
+
+image:
+  repository: andreiacsilva/invoice
+  tag: latest
+  pullPolicy: Always

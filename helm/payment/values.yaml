@@ -1,0 +1,6 @@
+replicaCount: 1
+
+image:
+  repository: andreiacsilva/payment
+  tag: latest
+  pullPolicy: Always
