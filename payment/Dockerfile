@@ -7,5 +7,5 @@ RUN go mod download && go get -u github.com/google/wire/cmd/wire && wire && CGO_
 ##Run Image
 FROM scratch
 COPY --from=builder /payment/bin/application application
-EXPOSE 9001
+EXPOSE 8080
 ENTRYPOINT ["./application"]

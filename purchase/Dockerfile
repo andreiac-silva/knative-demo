@@ -8,5 +8,5 @@ RUN go mod download && go get -u github.com/google/wire/cmd/wire && wire && CGO_
 FROM scratch
 COPY --from=builder /purchase/bin/application application
 COPY .env .env
-EXPOSE 9002
+EXPOSE 8080
 ENTRYPOINT ["./application"]
