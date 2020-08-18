@@ -1,0 +1,14 @@
+apiVersion: eventing.knative.dev/v1beta1
+kind: Trigger
+metadata:
+  name: trigger-process
+spec:
+  broker: broker-process
+  filter:
+    attributes:
+      type: dev.knative.eventing.demo.purchase
+  subscriber:
+    ref:
+      apiVersion: flows.knative.dev/v1beta1
+      kind: Parallel
+      name: parallel
