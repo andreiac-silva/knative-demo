@@ -13,7 +13,7 @@ spec:
     - ref:
         apiVersion: serving.knative.dev/v1
         kind: Service
-        name: email
+        name: payment
   reply:
     ref:
       kind: Broker
