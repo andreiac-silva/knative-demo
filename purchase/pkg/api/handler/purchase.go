@@ -17,7 +17,7 @@ func NewHandler(senderService cloudevent.SenderService) PurchaseHandler {
 	return PurchaseHandler{senderService: senderService}
 }
 
-func (handler *PurchaseHandler) Post(w http.ResponseWriter, r *http.Request) {
+func (handler *PurchaseHandler) Buy(w http.ResponseWriter, r *http.Request) {
 	requestBody, err := handler.extractBody(r)
 	if err != nil {
 		render.ResponseError(w, err, http.StatusPreconditionFailed)
@@ -30,7 +30,6 @@ func (handler *PurchaseHandler) Post(w http.ResponseWriter, r *http.Request) {
 		render.ResponseError(w, err, http.StatusInternalServerError)
 		return
 	}
-
 	Logger.Debug("Purchase event has created successfully")
 	render.Response(w, "", http.StatusCreated)
 }

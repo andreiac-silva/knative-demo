@@ -1,0 +1,9 @@
+replicaCount: 1
+
+image:
+  repository: andreiacsilva/purchase
+  tag: latest
+  pullPolicy: Always
+
+sinkbinding:
+  name: ecommerce-sink-binding
