@@ -3,7 +3,9 @@ Invoice Service is a dummy service that receives a cloud event and simulate invo
 
 ## Execution
 
-### First of all, you must download Wire
+### Local
+
+#### First of all, you must download Wire
 O Wire is responsible for dependency injection. Download it:
 ```
 go get -u github.com/google/wire/cmd/wire
@@ -15,7 +17,7 @@ wire
 
 ---
 
-### Locally
+#### Run
 
 ```
 go run ./
