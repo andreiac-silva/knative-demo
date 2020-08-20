@@ -4,7 +4,9 @@ This Service will approve purchase (dummy) and will load customer's name and e-m
 
 ## Execution
 
-### First of all, you must download Wire
+### Locally
+
+#### First of all, you must download Wire
 O Wire is responsible for dependency injection. Download it:
 ```
 go get -u github.com/google/wire/cmd/wire
@@ -16,7 +18,7 @@ wire
 
 ---
 
-### Locally
+#### Run
 
 ```
 go run ./
