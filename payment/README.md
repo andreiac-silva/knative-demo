@@ -65,7 +65,7 @@ curl -X POST \
 
 Structured
 ```
-curl -v "http://payment.demo.svc.cluster.local" \
+curl -v "http://localhost:8080" \
 -X POST \
 -H "Content-Type: application/cloudevents+json" \
 -d '{"data": {"customer":{ "cpf":"123.222.333-X" }, "items":[ { "id":2000, "description":"Covid-19 Vaccine", "quantity":70, "price":10.00 }, { "id":2001, "description":"Pale Ale Beer", "quantity":70, "price":15.00 }]},"datacontenttype": "application/json","id": "e587cbc20dcd4e4b80eaf9ebbb2c5efc","source": "http://sensedia.com/purchase/#demo/purchase-6f7b55865d-42jck","specversion": "1.0","time": "2020-08-18T11:27:00.000350563Z","type": "dev.knative.eventing.purchase"}'
