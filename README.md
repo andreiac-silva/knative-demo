@@ -20,7 +20,7 @@ To know more about Services individually, see their respective READMEs.
 
 All installation files are in [services-install](https://github.com/andreiac-silva/knative-demo/tree/master/services-install) directory. You'll see two sub-directories:
 
-:file_folder: helm
+:file_folder: helm <br />
 :file_folder: knative
 
 
@@ -29,19 +29,19 @@ All installation files are in [services-install](https://github.com/andreiac-sil
 You need a cluster with Kubernetes and Knative installed.
 
 ### Services
-Access [helm](https://github.com/andreiac-silva/knative-demo/tree/master/services-install/helm) directory. You can use [helm](https://helm.sh/docs/intro/install/) to install demo services:
+Access [helm directory](https://github.com/andreiac-silva/knative-demo/tree/master/services-install/helm). You can use [helm](https://helm.sh/docs/intro/install/) to install demo services:
 
-``` helm install purchase purchase/ -n demo ```
-``` helm install payment payment/ -n demo ```
-``` helm install email email/ -n demo ```
-``` helm install invoice invoice/ -n demo ```
+``` helm install purchase purchase/ -n demo ``` <br />
+``` helm install payment payment/ -n demo ``` <br />
+``` helm install email email/ -n demo ``` <br />
+``` helm install invoice invoice/ -n demo ``` <br />
 
 Other option is just apply kservice.yaml of each module by Kubernetes (remember to replace values on each kservice.yaml):
 
-```kubectl apply -f purchase/templates/kservice.yaml ```
-```kubectl apply -f payment/templates/kservice.yaml ```
-```kubectl apply -f email/templates/kservice.yaml ```
-```kubectl apply -f invoice/templates/kservice.yaml ```
+```kubectl apply -f purchase/templates/kservice.yaml ``` <br />
+```kubectl apply -f payment/templates/kservice.yaml ``` <br />
+```kubectl apply -f email/templates/kservice.yaml ``` <br />
+```kubectl apply -f invoice/templates/kservice.yaml ``` <br />
 
 ### Knative Components
-Access [knative](https://github.com/andreiac-silva/knative-demo/tree/master/services-install/knative) directory and execute create-flows.sh.
+Access [knative directory](https://github.com/andreiac-silva/knative-demo/tree/master/services-install/knative) and execute create-flows.sh.
