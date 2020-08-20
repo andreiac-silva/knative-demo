@@ -3,7 +3,7 @@ Purchase Service is a dummy service that receives a rest call and start an event
 
 ## Execution
 
-### Local
+- ### Local
 
 #### First of all, you must download Wire
 O Wire is responsible for dependency injection. Download it:
@@ -22,7 +22,7 @@ wire
 ```
 go run ./
 ```
-### Pulling the project image
+- ### Pulling the project image
 ```
 docker pull andreiacsilva/purchase:latest
 ```
