@@ -4,7 +4,6 @@ import (
 	"context"
 	"github.com/Pallinder/go-randomdata"
 	cloudevents "github.com/cloudevents/sdk-go/v2"
-	"github.com/cloudevents/sdk-go/v2/types"
 	"net/http"
 	. "payment/internal/logger"
 	"strings"
@@ -35,14 +34,10 @@ func (handler *CloudEventHandler) receive(event cloudevents.Event) (*cloudevents
 	}
 
 	// completing event payload with some random data
-	customer := purchase["customer"].(map[string]interface{})
-	loadCustomerInfo(customer)
-
-	// dummy logic to indicate if payment was approved or not
-	status := processPayment(customer)
+	loadCustomerInfo(purchase["customer"].(map[string]interface{}))
 
 	// extensions are headers
-	event.SetExtension("status", status)
+	event.SetExtension("status", "approved")
 
 	// setting new event payload
 	if err := event.SetData(cloudevents.ApplicationJSON, purchase); err != nil {
@@ -50,7 +45,7 @@ func (handler *CloudEventHandler) receive(event cloudevents.Event) (*cloudevents
 		return &event, cloudevents.NewHTTPResult(http.StatusInternalServerError, "Failed setting event data", err)
 	}
 
-	Logger.Debug("Payment status: ", status)
+	Logger.Debug("Payment approved!")
 
 	// returning event to the flow
 	return &event, nil
@@ -60,12 +55,6 @@ func loadCustomerInfo(customer map[string]interface{}) {
 	name := randomdata.FullName(randomdata.RandomGender)
 	customer["name"] = name
 	customer["email"] = strings.ToLower(strings.Replace(name, " ", ".", -1)) + "@gophers.com"
-}
 
-func processPayment(customer map[string]interface{}) string {
-	cpf, _ := types.ToString(customer["cpf"])
-	if strings.Contains(cpf, "123") {
-		return "approved"
-	}
-	return "refused"
+	Logger.Debug("Processing payment for customer " + name + " ...")
 }
