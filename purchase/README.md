@@ -27,17 +27,6 @@ go run ./
 docker pull andreiacsilva/purchase:latest
 ```
 
-### Environment Variables
-The service must receive some environment variables, by default those env vars are in .env file.
-Example:
-```
-SERVER_PORT=8080
-
-POD_NAMESPACE=demo 
-POD_NAME=purchase
-```
-Obs: Some env vars are set by Knative in deployment process.
-
 ### API
 Purchase service receives a **POST** in path "**/purchase/api/v1/buy**" with this body:
 
