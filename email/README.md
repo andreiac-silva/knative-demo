@@ -3,7 +3,7 @@ Email Service is a dummy service that receives a cloud event and simulate sendin
 
 ## Execution
 
-### Local
+- ### Local
 
 #### First of all, you must download Wire
 O Wire is responsible for dependency injection. Download it:
@@ -22,12 +22,12 @@ wire
 ```
 go run ./
 ```
-### Pulling the project image
+- ### Pulling the project image
 ```
 docker pull andreiacsilva/email:latest
 ```
 
-### How can I directly send a cloud event to Email Service?
+## How can I directly send a cloud event to Email Service?
 If you are running the application locally, you can simply send a POST request such as bellow.
 
 ```
