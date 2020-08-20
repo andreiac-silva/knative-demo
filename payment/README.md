@@ -29,7 +29,7 @@ docker pull andreiacsilva/payment:<v1,v2 or latest>
 ```
 
 ### How can I directly send a cloud event to Payment Service?
-If you are running the application locally, you can simply send a POST request such as bellow.
+If you are running the application locally, you can simply send a POST request such as one of bellow.
 
 Binary
 ```
