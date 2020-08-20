@@ -4,7 +4,7 @@ This Service will approve purchase (dummy) and will load customer's name and e-m
 
 ## Execution
 
-### Locally
+### Local
 
 #### First of all, you must download Wire
 O Wire is responsible for dependency injection. Download it:
