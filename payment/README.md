@@ -4,7 +4,7 @@ This Service will approve purchase (dummy) and will load customer's name and e-m
 
 ## Execution
 
-### Local
+- ### Local
 
 #### First of all, you must download Wire
 O Wire is responsible for dependency injection. Download it:
@@ -23,7 +23,7 @@ wire
 ```
 go run ./
 ```
-### Pulling the project image
+- ### Pulling the project image
 To simulate various versions running for the same application, there are 3 versions available on docker hub.
 So, you can pull some one of this tags v1, v2 or latest.
 ```
