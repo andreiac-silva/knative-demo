@@ -3,7 +3,9 @@ Purchase Service is a dummy service that receives a rest call and start an event
 
 ## Execution
 
-### First of all, you must download Wire
+### Local
+
+#### First of all, you must download Wire
 O Wire is responsible for dependency injection. Download it:
 ```
 go get -u github.com/google/wire/cmd/wire
@@ -15,7 +17,7 @@ wire
 
 ---
 
-### Locally
+#### Run
 
 ```
 go run ./
