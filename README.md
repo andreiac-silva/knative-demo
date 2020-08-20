@@ -11,7 +11,7 @@ We have an online store. To buy something, the applicating pass to the following
 1. (source) Purchase Service receives the initial payload - user input
 2. (sequence) Payment Service receives the payload from Purchase, load customer information and approves payment
 3. (parallel) Email Service sends an email with transaction with payment status
-4. (parallel) Invoce Service will surprisingly generate purchase invoice :smile:
+4. (parallel) Invoce Service will surprisingly generate a fake purchase invoice :smile:
 
 These are ficticios functionalities. The most important here are how the services are communicating with each other and how we can maintain two or more versions of one service at the same time. 
 To know more about Services individually, see their respective READMEs. 
