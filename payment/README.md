@@ -1,6 +1,6 @@
 # Payment
 Payment Service is a dummy service that receives a cloud event, process and propagate it thought the flow.
-This Service will approve purchase for customers with attribute cpf (see curl) containing "123". Besides that, will load customer's name and e-mail into current event.
+This Service will approve purchase (dummy) and will load customer's name and e-mail into current event.
 
 ## Execution
 
